@@ -89,7 +89,7 @@ const TireForm: React.FC<TireFormProps> = ({ onSubmit }) => {
         <div className="create-tire__container">
             <form className="tire-form" onSubmit={handleSubmit}>
                 <div className="tire-form__section tire-form__section--left">
-                    <img src={'/public/big-car-tire-summer.webp'} alt="Tire Image" className="tire-form__image" />
+                    {/* <img src={'/public/big-car-tire-summer.webp'} alt="Tire Image" className="tire-form__image" /> */}
                 </div>
                 <div className="tire-form__section tire-form__section--middle">
                     <div className='tire-form--horizontal'>
