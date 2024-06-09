@@ -175,27 +175,22 @@ function FilterTires() {
     if (checkboxValue.length === 1 && season !== '0') {
       dataTires.manufacturer = checkboxValue.join();
       dataTires.season = season;
-      console.log('1');
       fetchfilterTires(dataTires);
     } else if (checkboxValue.length === 1) {
       dataTires.manufacturer = checkboxValue.join();
-      console.log('2');
       fetchfilterTires(dataTires);
     } else if (checkboxValue.length > 1) {
       checkboxValue.map(function(item)  {
         dataTires.manufacturer = item;
-        console.log('3');
         fetchfilterTires(dataTires);
+        return <></>
       });
     } else if (season !== '0') {
       dataTires.season = season;
-      console.log('4');
       fetchfilterTires(dataTires);
     } else {
-      console.log('5');
       fetchfilterTires(dataTires);
     }
-    console.log(dataList);
   }
 
   function dropdownManufacturer() {
