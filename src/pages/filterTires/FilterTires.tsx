@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import '../filterTires/FilterTires.css';
 import { tires } from './tires';
 import { ITire } from '../../interfaces/ITire';
@@ -56,21 +56,21 @@ function FilterTires() {
   const allCheckedCheap = checkCheap.every(({ checked }) => checked);
 
   function checkAll(idx: any) {
-    if (idx == 'premium') {
+    if (idx === 'premium') {
       setCheckPremium(checkPremium => {
         return checkPremium.map(item => ({
           ...item,
           checked: !allCheckedPremium,
         }));
       });
-    } else if (idx == 'medium') {
+    } else if (idx === 'medium') {
       setCheckMedium(checkMedium => {
         return checkMedium.map(item => ({
           ...item,
           checked: !allCheckedMedium,
         }));
       });
-    } else if (idx == 'ekonomiczna') {
+    } else if (idx === 'ekonomiczna') {
       setCheckCheap(checkCheap => {
         return checkCheap.map(item => ({
           ...item,
@@ -81,7 +81,7 @@ function FilterTires() {
   }
 
   function checkCur(idx: any, product: any) {
-    if (product == 'premium') {
+    if (product === 'premium') {
       setCheckPremium(checkPremium => {
         return checkPremium.map((item, index) => {
           if (index === idx) {
@@ -93,7 +93,7 @@ function FilterTires() {
           return item;
         });
       });
-    } else if (product == 'medium') {
+    } else if (product === 'medium') {
       setCheckMedium(checkMedium => {
         return checkMedium.map((item, index) => {
           if (index === idx) {
@@ -105,7 +105,7 @@ function FilterTires() {
           return item;
         });
       });
-    } else if (product == 'ekonomiczna') {
+    } else if (product === 'ekonomiczna') {
       setCheckCheap(checkCheap => {
         return checkCheap.map((item, index) => {
           if (index === idx) {
@@ -172,12 +172,12 @@ function FilterTires() {
       return dataList;
     };
 
-    if (checkboxValue.length == 1 && season != '0') {
+    if (checkboxValue.length === 1 && season !== '0') {
       dataTires.manufacturer = checkboxValue.join();
       dataTires.season = season;
       console.log('1');
       fetchfilterTires(dataTires);
-    } else if (checkboxValue.length == 1) {
+    } else if (checkboxValue.length === 1) {
       dataTires.manufacturer = checkboxValue.join();
       console.log('2');
       fetchfilterTires(dataTires);
@@ -187,7 +187,7 @@ function FilterTires() {
         console.log('3');
         fetchfilterTires(dataTires);
       });
-    } else if (season != '0') {
+    } else if (season !== '0') {
       dataTires.season = season;
       console.log('4');
       fetchfilterTires(dataTires);
@@ -203,7 +203,7 @@ function FilterTires() {
       <div className="choose-manufacturer">
         <div className="dropdown" onClick={handleOpenManufacturer}>
           <span>Wszyscy</span>
-          <FontAwesomeIcon icon={faChevronDown} />
+          {/* <FontAwesomeIcon icon={faChevronDown} /> */}
         </div>
         {openManufacturer ? (
           <>

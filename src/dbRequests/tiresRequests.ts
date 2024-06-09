@@ -1,7 +1,7 @@
 import { ITire } from '../interfaces/ITire';
 import { ICreateTireData } from '../pages/createTire/TireForm';
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 
 export async function loadAllTires(): Promise<ITire[]> {
   const result = await fetch(`https://q11.jvmhost.net/api/tires`, {
@@ -13,7 +13,7 @@ export async function loadAllTires(): Promise<ITire[]> {
 }
 
 export async function createTire(tireData: ICreateTireData): Promise<ITire | string> {
-  const result = await fetch(`${BASE_URL}/api/tires`, {
+  const result = await fetch(`https://q11.jvmhost.net/api/tires`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
