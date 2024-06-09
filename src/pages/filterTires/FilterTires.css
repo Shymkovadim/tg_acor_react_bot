@@ -320,15 +320,4 @@ input[type='number']::-webkit-inner-spin-button {
   display: none;
 }
 
-.tire-list {
-  width: 1320px;
-  margin: auto;
-  justify-content: flex-start;
-}
 
-.tire-item:not(:nth-child(5)) {
-  margin-left: 40px;
-}
-.tire-item:first-child {
-  margin-left: 0;
-}
