@@ -182,7 +182,7 @@ function FilterTires() {
       console.log('2');
       fetchfilterTires(dataTires);
     } else if (checkboxValue.length > 1) {
-      checkboxValue.map(item => {
+      checkboxValue.map(function(item)  {
         dataTires.manufacturer = item;
         console.log('3');
         fetchfilterTires(dataTires);
@@ -377,7 +377,7 @@ function FilterTires() {
               </div>
             </div>
             <div className="btn-wrapper">
-              <button onClick={handleClickSearch} disabled={width == '0' || diameter == '0' || profile == '0'}>
+              <button onClick={handleClickSearch} disabled={width === '0' || diameter === '0' || profile === '0'}>
                 Szukaj opon
               </button>
             </div>
